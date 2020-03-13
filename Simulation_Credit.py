@@ -23,7 +23,7 @@
 import time
 
 class Simulation_Credit():
-    ''' Calcul le montant des mensualités d'un crédit
+    ''' Calcul le montant des menssualités d'un crédit
     
     montant: montant à emprunter
     
@@ -43,9 +43,9 @@ class Simulation_Credit():
             self.start_time = time.time()
     
     def run(self):
-        ''' mensualite = montant des mensualite
+        ''' menssualite = montant des menssualite
         
-        montant_total = montant total à rembourses
+        montant_total = montant total à rembourser
         '''
         if self.debug:
             print('Montant {} | Durée {} | Taux {}'.format(self.montant,
@@ -53,13 +53,13 @@ class Simulation_Credit():
                                                            self.taux))
         
         if self.taux != 0:
-            self.mensualite = round((self.montant * self.taux / 100 / 12)
+            self.menssualite = round((self.montant * self.taux / 100 / 12)
                                     /
                                     (1 - (1 + ((self.taux / 100) / 12)) ** (-1 * self.duree)))
         else:
-            self.mensualite = round(self.montant / self.duree)
+            self.menssualite = round(self.montant / self.duree)
             
-        self.montant_total = round(self.mensualite * self.duree)
+        self.montant_total = round(self.menssualite * self.duree)
         
         if self.debug:
             self.do_simuletxt()
@@ -72,15 +72,15 @@ class Simulation_Credit():
         
         for a in range (1, self.duree):
             
-            montant_restant -= self.mensualite
+            montant_restant -= self.menssualite
             
             print('Paiement {} sur {} : {} | Reste à payer {} sur {}'.format(a,
                                                                              self.duree,
-                                                                             self.mensualite,
+                                                                             self.menssualite,
                                                                              montant_restant,
                                                                              self.montant_total))
         
-        # Dernière mensualité couvrant donc la totalitée des sommes dûes
+        # Dernière menssualité couvrant donc la totalitée des sommes dûes
         print('Paiement {} sur {} : {} | Reste à payer {} sur {}'.format(a+1,
                                                                          self.duree,
                                                                          montant_restant,
@@ -99,5 +99,5 @@ if __name__ == '__main__':
                             taux = 3.14)
     App.run()
     
-    print('La mensualité est de {}\nLe montant total à rembourser est de {}'.format(App.mensualite,
+    print('La menssualité est de {}\nLe montant total à rembourser est de {}'.format(App.menssualite,
                                                                                     App.montant_total))
