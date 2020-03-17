@@ -26,3 +26,6 @@ Référence API
 
 .. automodule:: Simulation_Credit
    :members:
+   
+.. automodule:: Simulation_Credit_GUI
+    :members:
