@@ -7,4 +7,4 @@ Permet la simulation d'un crédit. Il vous suffit d'entrer le montant, la durée
 - Simulation_Credit_GUI est l'interface graphique.
 - Simulation_Credit c'est la class réutilisable.
 
-> C'était pour moi l'occasion d'essayer sphinx et un éditeur markdown. J'ai beaucoup apprécier les deux outils.
+> C'était pour moi l'occasion d'essayer sphinx et un éditeur markdown. J'ai beaucoup apprécié les deux outils.
