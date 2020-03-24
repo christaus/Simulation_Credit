@@ -156,7 +156,8 @@ class Simulation_Credit_GUI(Toplevel):
                                     duree = duree,
                                     taux = float(taux))
             App.run()
-            self.mensualite.set('La menssualité est de {}\nLe montant total à rembourser est de {}'.format(App.menssualite, App.montant_total))
+            self.mensualite.set('''La menssualité est de {}
+Le montant total à rembourser est de {}'''.format(App.menssualite, App.montant_total))
             
         else:
             if self.debug:
